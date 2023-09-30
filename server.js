@@ -329,7 +329,7 @@ app.post('/login', async (req, res) => {
 */
 app.post('/logIn', (req, res) =>{
   const userDetails = req.body;
-  if (userDetails.patientId == "200011074" && userDetails.password == "2000110764")
+  if (userDetails.patientId == "2000110764" && userDetails.password == "2000110764")
     res.status(202).send();
   else
   res.status(401).send();
