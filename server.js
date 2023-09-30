@@ -309,7 +309,7 @@ app.post('/editAppointment', async (req, res) => {
     res.status(500).json({status: err.sqlState});
   }
 });
-
+/*
 app.post('/login', async (req, res) => {  
   const userDetails = req.body;
   try {
@@ -326,7 +326,7 @@ app.post('/login', async (req, res) => {
     res.status(500).json({error: 'error while check logIn'});
   }
 });   // login -> logIn
-
+*/
 app.post('logIn', (req, res) =>{
   const userDetails = req.body;
   if (userDetails.patientId == "200011074" && userDetails.password == "2000110764")
