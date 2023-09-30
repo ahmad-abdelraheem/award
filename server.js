@@ -57,8 +57,7 @@ app.get('/getClinics', async (req, res) => {
        {id:"2005", name : "عيادة 6"},
        {id:"2006", name : "عيادة 7"},
        {id:"2007", name : "عيادة 8"},
-       {id:"2008", name : "عيادة عيادة عيادة عيادة"},
-  );
+       {id:"2008", name : "عيادة عيادة عيادة عيادة"}]);
 });
 
 app.get('/startBooking', async (req, res) => {
