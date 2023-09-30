@@ -22,14 +22,9 @@ const pool = mysql.createPool({
   });
   */
 app.get('/getHospitals', async (req, res) => {
-  const sql = 'SELECT Hos_ID AS id, Hos_Name AS name FROM hospitals';
-  try {
-    const [results, field] = await pool.query(sql);
-    res.json(results);
-  } catch(err) {
-    console.error("Error while executing the query : ", err);
-    res.status(500).json({error:'Error fetching hospitals.'});
-  }
+    res.json([{id:"1000", name: "مستشفى 1"},
+              {id:"1001", name: "مستشفى 2"},
+              {id:"1002", name: "مستشفى 3"});
 });
 
 app.get('/getHospitalsByCity', async (req, res) => {
