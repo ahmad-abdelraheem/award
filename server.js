@@ -24,7 +24,15 @@ const pool = mysql.createPool({
 app.get('/getHospitals', async (req, res) => {
     res.json([{id:"1000", name: "مستشفى 1"},
               {id:"1001", name: "مستشفى 2"},
-              {id:"1002", name: "مستشفى 3"});
+              {id:"1002", name: "مستشفى 3"},
+              {id:"1003", name: "مستشفى 4"},
+              {id:"1004", name: "مستشفى 5"},
+              {id:"1005", name: "مستشفى 6"},
+              {id:"1006", name: "مستشفى 7"},
+              {id:"1007", name: "مستشفى 8"},
+              {id:"1008", name: "مستشفى 9"},
+              {id:"1009", name: "مستشفى 10"}
+              );
 });
 
 app.get('/getHospitalsByCity', async (req, res) => {
