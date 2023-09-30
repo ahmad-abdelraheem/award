@@ -48,16 +48,17 @@ app.get('/getHospitalsByCity', async (req, res) => {
 });
 
 app.get('/getClinics', async (req, res) => {
-  const clinicId = req.body.clinicId;
-  const sql = `SELECT Cli_ID AS id, Specialization AS name FROM clinics
-              WHERE Cli_ID = '${clinicId}'`;
-  try {
-    const [results, field] = pool.query(sql);
-    res.json(results);
-  } catch(err) {
-    console.error('Error while executing the query : ', err);
-    res.status(500).json({error: 'error fetching clinics'});
-  }
+  res.json(
+      [{id:"2000", name : "عيادة 1"},
+       {id:"2001", name : "عيادة 2"},
+       {id:"2002", name : "عيادة 3"},
+       {id:"2003", name : "عيادة 4"},
+       {id:"2004", name : "عيادة 5"},
+       {id:"2005", name : "عيادة 6"},
+       {id:"2006", name : "عيادة 7"},
+       {id:"2007", name : "عيادة 8"},
+       {id:"2008", name : "عيادة عيادة عيادة عيادة"},
+  );
 });
 
 app.get('/startBooking', async (req, res) => {
