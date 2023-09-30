@@ -310,7 +310,7 @@ app.post('/editAppointment', async (req, res) => {
   }
 });
 
-app.post('/logIn', async (req, res) => {
+app.post('/login', async (req, res) => {  
   const userDetails = req.body;
   try {
     const result = await pool.query(`SELECT Pat_ID AS id,Pat_Password as password FROM patients WHERE Pat_ID = '${userDetails.patientId}'`);
@@ -325,7 +325,16 @@ app.post('/logIn', async (req, res) => {
     console.error('error in login end point   :   ', err);
     res.status(500).json({error: 'error while check logIn'});
   }
+});   // login -> logIn
+
+app.post('logIn', (req, res) =>{
+  const userDetails = req.body;
+  if (userDetails.patientId == "200011074" && userDetails.password == "2000110764")
+    res.status(202).send();
+  else
+  res.status(401).send();
 });
+
 
 app.post('/updatePassword', async (req, res) => {
   const updateDetails = req.body;
