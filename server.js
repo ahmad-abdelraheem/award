@@ -31,8 +31,7 @@ app.get('/getHospitals', async (req, res) => {
               {id:"1006", name: "مستشفى 7"},
               {id:"1007", name: "مستشفى 8"},
               {id:"1008", name: "مستشفى 9"},
-              {id:"1009", name: "مستشفى 10"}
-              );
+              {id:"1009", name: "مستشفى 10"}]);
 });
 
 app.get('/getHospitalsByCity', async (req, res) => {
