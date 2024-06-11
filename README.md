@@ -6,7 +6,7 @@ This Node.js application serves as the backend API for managing appointments in 
 ## Installation
 1. **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/ahmad-abdelraheem/award.git
     ```
 2. **Install dependencies:**
     ```bash
