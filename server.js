@@ -12,15 +12,15 @@ app.use(bodyParser.json());
 app.use((req, res, next) => {
     console.log(`Incoming ${req.method} request to ${req.url}`);
     next();
-  });
-/*
+});
+
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'Madrap#28',
     database: 'mawaeed_db',
-  });
-  */
+});
+
 app.get('/getHospitals', async (req, res) => {
     res.json([{id:"1000", name: "مستشفى 1"},
               {id:"1001", name: "مستشفى 2"},
