@@ -85,7 +85,7 @@ app.get('/startBooking', async (req, res) => {
           turns: []
         });
       }
-    } else {  // if(minDate != null)
+    } else {  // if(minDate == null)
       const minDateJordan = date.toJordan(minDate);
       const maxDateJordan = date.toJordan(maxDate);
 
